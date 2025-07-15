@@ -7,10 +7,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Step 2: Load your dataset
-# df = pd.read_csv('IRIS.csv')
-
-# Sample data if you're using the inbuilt iris dataset:
+# Step 2: Sample data if you're using the inbuilt iris dataset:
 from sklearn.datasets import load_iris
 iris = load_iris()
 df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
@@ -22,7 +19,7 @@ df['Species'] = df['Species'].map(species_map)
 print(df.head())
 
 # Step 4: Split into features and target
-X = df.iloc[:, :-1]  # all columns except 'Species'
+X = df.iloc[:, :-1] 
 y = df['Species']
 
 # Step 5: Encode class labels
